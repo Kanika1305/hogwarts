@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Harry Potter">
+    <meta property="og:description" content="Welcome to Hogwarts">
+    <meta property="og:image" content="https://imgur.com/a/ScxN1JV">
+    <meta property="og:image:type" content="image/jpeg"> 
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:url" content="Share url">
+    <meta property="og:type" content="website"> 
+    <meta name="keywords" content="Harry Potter, Hogwarts, Magic, KanikaChauhan,kanikachauhan, Kanika chauhan,Kanika Chauhan">
+    
+    <title>Harry Potter</title>
+    <link rel="shortcut icon" type="x-icon" href="icons8-magic-96.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
+</head>
+<body style="font-family: fonth;" id="tsparticles">
+  <main>
+    <audio autoplay loop>
+        <source src="harry_potter_theme_1.mp3" type="audio/mpeg">
+    </audio>
+
+    <div style="font-family: fonth;" class="scroll">
+      <h1>Welcome to Hogwarts</h1>
+      <p>Your magical journey awaits!</p>
+    </div>
+    
+    <div class="choose">
+      <h2>Choose Your journey!</h2>
+    </div>
+
+    <div class="container">
+        <a href="hp1.html"><img src="HarryPotter-Book1-etsy.jpg" alt="book1"></a>
+        <a href="hp2.html"><img src="hp1.jpg" alt="book2"></a>
+        <a href="hp3.html"><img src="hp1.jpg" alt="book3"></a>
+        <a href="hp4.html"><img src="hp1.jpg" alt="book4"></a>
+        <a href="hp5.html"><img src="hp1.jpg" alt="book5"></a>
+        <a href="hp6.html"><img src="hp1.jpg" alt="book6"></a>
+        <a href="hp7.html"><img src="hp1.jpg" alt="book7"></a>
+        <a href="hp8.html"><img src="hp1.jpg" alt="book8"></a>
+    </div>
+  </main>
+    <footer>
+      <p>&copy; 2024 Hogwarts School of Witchcraft and Wizardry | All rights reserved.</p>
+    </footer>
+
+    <script>
+    tsParticles.load("tsparticles", {
+      particles: {
+        number: {
+          value: 50, 
+        },
+        color: {
+          value: ["#FFA500", "#FFD700", "#ffff"] 
+        },
+        shape: {
+          type: "circle"
+        },
+        opacity: {
+          value: 0.4,
+          random: { enable: true, minimumValue: 0.6 }, 
+          animation: {
+            enable: true,
+            speed: 2,
+            minimumValue: 0.5,
+            sync: false
+          }
+        },
+        size: {
+          value: 5, 
+          random: { enable: true, minimumValue: 3 },
+          animation: {
+            enable: true,
+            speed: 5,
+            minimumValue: 2, 
+            sync: false
+          }
+        },
+        move: {
+          direction: "top", 
+          enable: true,
+          speed: 1.5, 
+          random: false,
+          straight: false,
+          outModes: {
+            default: "out" 
+          }
+        },
+        shadow: {
+          enable: true, 
+          color: "#FFD700", 
+          blur: 10 
+        }
+      }
+    });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sliding Movie Cards</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Header styling */
+    header {
+      background: linear-gradient(to right, #000, #333);
+      padding: 20px;
+      text-align: center;
+      font-family: fonth;
+      color: gold;
+      font-size: 2.5rem;
+      border-bottom: 2px solid #ffcc00;
+      width: 100%;
+    }
+
+    /* Footer styling */
+    footer {
+      padding: 20px;
+      text-align: center;
+      background-color: #111;
+      color: #ffcc00;
+      font-family: fonth;
+      width: 100%;
+    }
+
+    @font-face {
+      font-family: fonth;
+      src: url(HarryP-MVZ6w.ttf);
+    }
+
+    /* Body setup */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #222;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Slider container */
+    .slider-container {
+      width: 80%;
+      overflow-x: auto;
+      margin-top: 20px; /* Ensure space between header and content */
+    }
+
+    .slider {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    /* Movie card styling */
+    .movie-card {
+      width: 300px;
+      height: 450px;
+      position: relative;
+      perspective: 1000px;
+    }
+
+    .card-front,
+    .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    /* Front of the card with image */
+    .card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    /* Back of the card with movie details */
+    .card-back {
+      background-image: radial-gradient(rgb(200, 118, 12), rgb(128, 186, 214), black);
+      color: #000000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      transform: rotateY(180deg);
+      font-size: 1.5em;
+      font-family: fonth;
+    }
+
+    /* Card flip effect */
+    .movie-card:hover .card-front {
+      transform: rotateY(180deg);
+    }
+
+    .movie-card:hover .card-back {
+      transform: rotateY(0deg);
+    }
+
+    /* Movie title styling */
+    h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    Harry Potter and the Sorcerer's Stone
+  </header>
+
+  <!-- Slider container with movie card -->
+  <div class="slider-container">
+    <div class="slider">
+      <!-- Movie Card 1 -->
+      <div class="movie-card">
+        <div class="card-front">
+          <img src="mov1.jpg" alt="Movie Poster 1">
+        </div>
+        <div class="card-back">
+          <h2>Harry Potter and the Sorcerer's Stone</h2>
+          <p><strong>Release Date:</strong>  November 10, 2001</p>
+          <p><strong>Director:</strong> Chris Columbus</p>
+          <p><strong>Genres:</strong> Fantasy, Adventure, Family</p>
+          <p><strong>Rating:</strong> 7.6/10</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2024 Harry Potter Fansite. All Rights Reserved.
+  </footer>
+</body>
+</html>
